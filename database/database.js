@@ -10,7 +10,7 @@ const pool = new Pool({
 })
 
 async function getdata(){
-    const sql = `select "Country/Region" as country , "Province/State" as province
+    const sql = `select "Country/Region" as country , "Province/State" as province,"3/23/20" as death
     from covid19_confirmed_csv`
     const data = await pool.query(sql);
     // console.log(data);

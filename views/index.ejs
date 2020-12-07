@@ -33,25 +33,26 @@
       <table class="table table-sm table-dark">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Country</th>
-            <th scope="col">Province</th>
-            <th scope="col">Population</th>
+            <th scope="col">Provice</th>
+            <th scope="col">Death</th>
           </tr>
         </thead>
         <tbody>
         
           <tr><% resultData.forEach(function(data){ %>
-            <td scope="row">
-              
-            </td>
+            
             <td>
              
-                <p></p><%=data.country%></p>
+                <p><%=data.country%></p>
              
             </td>
-            <td></td>
-            <td></td>
+            <td>
+              <p><%=data.province%></p>
+            </td>
+            <td>            
+              <p><%=data.death%></p>        
+            </td>
           </tr><% }); %>
         </tbody>
       </table>
