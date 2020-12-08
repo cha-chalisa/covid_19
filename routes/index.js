@@ -15,6 +15,19 @@ router.get('/country',async function(req, res, next) {
   res.render('country', { resultData: result.rows });
 });
 
+router.get('/home',async function(req, res, next) {
+  const result = await db.getall();
+  console.log(result.rows);
+  res.render('home', { resultData: result.rows });
+});
+
+router.get('/world',async function(req, res, next) {
+  const result = await db.getworld();
+  console.log(result.rows);
+  res.render('world', { resultData: result.rows });
+});
+
+
 
 
 
