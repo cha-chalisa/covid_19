@@ -9,4 +9,13 @@ router.get('/',async function(req, res, next) {
   res.render('index', { resultData: result.rows });
 });
 
+router.get('/country',async function(req, res, next) {
+  const result = await db.getall();
+  console.log(result.rows);
+  res.render('country', { resultData: result.rows });
+});
+
+
+
+
 module.exports = router;
